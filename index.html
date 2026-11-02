@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>رشفة كوفي | Rishfa Coffee — عمّان</title>
+<meta name="description" content="رشفة كوفي بعمّان: قهوة، لاتيه، ماتشا، فرابتشينو ومشروبات ساخنة وباردة. شوف المنيو والأسعار، ومفتوحين يومياً من 8 الصبح لـ 12 بالليل.">
+<meta name="theme-color" content="#14110F">
+<meta property="og:title" content="رشفة كوفي | Rishfa Coffee — الحب من أول رشفة">
+<meta property="og:description" content="المنيو والأسعار وموقعنا بعمّان · Menu, prices and location in Amman. Open daily 8 AM – 12 AM.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="ar" href="./?lang=ar">
+<link rel="alternate" hreflang="en" href="./?lang=en">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<link rel="preload" as="image" href="img/p_hero.webp">
+<link rel="preload" as="font" type="font/woff2" href="fonts/noto-kufi-arabic-arabic-wght-normal.woff2" crossorigin>
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"رشفة كوفي | Rishfa Coffee","alternateName":"Sip Coffee","servesCuisine":"Coffee","priceRange":"$","currenciesAccepted":"JOD","address":{"@type":"PostalAddress","addressLocality":"Amman","addressCountry":"JO"},"geo":{"@type":"GeoCoordinates","latitude":31.895154,"longitude":35.928988},"hasMap":"https://maps.app.goo.gl/vbGSY1e3Hm7TKs9f9","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:00","closes":"23:59"}],"sameAs":["https://www.instagram.com/sip.coffee.jo/"]}
+</script>
+</head>
+<body>
+
+<div class="pre" id="pre" aria-hidden="true"><img src="img/logo.svg" alt=""><i><b id="preBar"></b></i></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="رشفة كوفي"><img src="img/logo.svg" alt="رشفة"></a>
+  <nav class="links" aria-label="Sections"><a href="#drinks" data-i18n="nDrinks">مشروباتنا</a><a href="#menu" data-i18n="nMenu">المنيو</a><a href="#visit" data-i18n="nVisit">زورونا</a><a href="#contact" data-i18n="nContact">تواصل</a></nav>
+  <div class="nav__end"><button class="lang" id="langBtn" type="button" lang="en" aria-label="Switch to English">English</button><a class="cta" href="#menu" data-i18n="cta">المنيو والأسعار</a></div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero__pin">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__word" aria-hidden="true">رشفة</div>
+    <div class="hero__copy">
+      <p class="kick" data-i18n="kick">Coffee &amp; More · عمّان</p>
+      <h1 class="hero__t" data-i18n="h1"><span class="ln"><span>الحب</span></span><span class="ln"><span>من <em>أول رشفة.</em></span></span></h1>
+      <p class="hero__p" data-i18n="heroP">قهوة، لاتيه، ماتشا وفرابتشينو، ساخن وبارد، بأسعار بتبدأ من ربع دينار. مفتوحين كل يوم من 8 الصبح لـ 12 بالليل.</p>
+      <div class="hero__btns"><a class="btn" href="#menu" data-i18n="bMenu">شوف المنيو</a><a class="btn btn--line" href="#visit" data-i18n="bWhere">وين موقعنا</a></div>
+    </div>
+    <div class="hero__cup" id="heroCup"></div>
+    <div class="scrollcue" aria-hidden="true"><i></i><span data-i18n="cue">مرّر</span></div>
+  </div>
+</section>
+
+<!-- DRINKS: pinned, each drink takes the whole screen in its own colour -->
+<section class="range" id="drinks">
+  <div class="range__pin" id="rangePin">
+    <div class="range__word" id="rWord" aria-hidden="true"></div>
+    <div class="range__head"><p class="kick kick--light" data-i18n="rKick">مشروباتنا</p><span class="range__count"><b id="rNum">01</b> / <span id="rTot">09</span></span></div>
+    <div class="range__stage" id="stage"></div>
+    <div class="range__info">
+      <span class="tag" id="rTag"></span>
+      <h2 id="rName"></h2>
+      <p class="range__en" id="rEn"></p>
+      <p class="range__desc" id="rDesc"></p>
+      <div class="price" id="rPrice"></div>
+    </div>
+    <div class="range__dots" id="rDots"></div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="menu__head">
+    <p class="kick" data-i18n="mKick">المنيو</p>
+    <h2 class="h2" data-i18n="mH">كل الأسعار، <em>بوضوح.</em></h2>
+    <p class="menu__sub" data-i18n="mSub">الأسعار بالدينار الأردني.</p>
+  </div>
+  <div class="tabs" role="tablist" aria-label="Menu" id="tabs"></div>
+  <div class="menu__panels" id="panels"></div>
+</section>
+
+<!-- KINETIC -->
+<section class="kinetic" id="kinetic">
+  <div class="kinetic__pin">
+    <div class="kinetic__line" id="k1" data-i18n="k1">الحب</div>
+    <div class="kinetic__line" id="k2" data-i18n="k2">من أول</div>
+    <div class="kinetic__line k-em" id="k3" data-i18n="k3">رشفة.</div>
+    <div class="kinetic__cup" id="kCup"></div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit__info">
+    <p class="kick" data-i18n="vKick">زورونا</p>
+    <h2 class="h2" data-i18n="vH">مستنيينكم <em>كل يوم.</em></h2>
+    <div class="hours">
+      <div class="hours__now" id="openNow"></div>
+      <div class="hours__row"><span data-i18n="vDays">كل أيام الأسبوع</span><b dir="ltr">8:00 AM – 12:00 AM</b></div>
+    </div>
+    <div class="visit__btns">
+      <a class="btn" href="https://maps.app.goo.gl/vbGSY1e3Hm7TKs9f9" target="_blank" rel="noopener" data-i18n="vMap">افتح الموقع على الخريطة</a>
+    </div>
+  </div>
+  <div class="visit__map">
+    <iframe title="Rishfa Coffee — map" src="https://maps.google.com/maps?q=31.895154,35.928988&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact__head">
+    <p class="kick kick--light" data-i18n="cKick">تواصلوا معنا</p>
+    <h2 class="h2" data-i18n="cH">خلّينا <em>على تواصل.</em></h2>
+    <a class="contact__ig" href="https://www.instagram.com/sip.coffee.jo/" target="_blank" rel="noopener" dir="ltr">@sip.coffee.jo</a>
+  </div>
+  <div class="cgrid" id="cGrid">
+    <a class="ccard" href="https://www.instagram.com/sip.coffee.jo/" target="_blank" rel="noopener"><span class="ccard__ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor"/></svg></span><small data-i18n="cIg">إنستغرام</small><b dir="ltr">@sip.coffee.jo</b><em data-i18n="cIgGo">تابعونا وراسلونا ←</em></a>
+    <a class="ccard" href="https://maps.app.goo.gl/vbGSY1e3Hm7TKs9f9" target="_blank" rel="noopener"><span class="ccard__ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><small data-i18n="cLoc">الموقع</small><b data-i18n="cCity">عمّان، الأردن</b><em data-i18n="cLocGo">افتح الاتجاهات ←</em></a>
+    <div class="ccard"><span class="ccard__ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span><small data-i18n="cHours">ساعات الدوام</small><b dir="ltr">8:00 AM – 12:00 AM</b><em data-i18n="cDays">كل أيام الأسبوع</em></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="foot__top"><img src="img/logo.svg" alt="رشفة"><div><p class="foot__t" data-i18n="fT">الحب من أول رشفة.</p><p class="foot__s" data-i18n="fS">Rishfa Coffee · عمّان</p></div></div>
+  <div class="foot__bottom"><span dir="ltr">© <span id="yr">2026</span> Rishfa Coffee</span><a href="https://velixweb.xyz" target="_blank" rel="noopener" data-i18n="fBy">تصميم وتطوير <b>VELIX</b></a></div>
+</footer>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
